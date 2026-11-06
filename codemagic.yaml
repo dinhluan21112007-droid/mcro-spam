@@ -1,7 +1,7 @@
 workflows:
   ios-build:
     name: Build iOS IPA
-    instance_type: macos-medium
+    instance_type: mac_mini
     environment:
       xcode: 15.0
     scripts:
