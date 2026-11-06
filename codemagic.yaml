@@ -3,7 +3,7 @@ workflows:
     name: Build iOS IPA
     instance_type: mac_mini_m2
     environment:
-      xcode: 15.4
+      xcode: 15.0
     scripts:
       - xcodegen generate
       - xcodebuild archive -scheme ClickTap -configuration Release -archivePath ClickTap.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
