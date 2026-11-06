@@ -16,4 +16,25 @@ targets:
     settings:
       base:
         INFOPLIST_FILE: Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: 
+
+        name: ClickTap
+options:
+  bundleId: com.clicktap.app
+  deploymentTarget:
+    iOS: "15.0"
+settings:
+  base:
+    SWIFT_VERSION: 5.9
+targets:
+  ClickTap:
+    type: application
+    platform: iOS      # ← THÊM DÒNG NÀY
+    sources:
+      - path: .
+        excludes:
+          - "README.md"
+    settings:
+      base:
+        INFOPLIST_FILE: Info.plist
         PRODUCT_BUNDLE_IDENTIFIER: com.clicktap.app
