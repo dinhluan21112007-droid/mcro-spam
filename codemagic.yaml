@@ -1,12 +1,9 @@
 workflows:
-  ios-workflow:
+  ios:
     name: iOS Build
     instance_type: mac_mini
     xcode: 15.4
-    environment:
-      xcode_project: YourProject.xcodeproj
-      xcode_scheme: YourProject
     scripts:
-      - xcodebuild build -project "$CM_XCODE_PROJECT" -scheme "$CM_XCODE_SCHEME" -destination 'platform=iOS Simulator,name=iPhone 15'
+      - xcodebuild build -scheme mcro-spam -destination 'platform=iOS Simulator,name=iPhone 15'
     artifacts:
       - "*.app"
