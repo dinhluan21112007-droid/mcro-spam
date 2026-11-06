@@ -1,7 +1,7 @@
 workflows:
   ios:
     name: iOS Build
-    instance_type: mac_mini
+    instance_type: macos_mini
     scripts:
       - xcodebuild build -scheme mcro-spam -destination 'platform=iOS Simulator,name=iPhone 15'
     artifacts:
