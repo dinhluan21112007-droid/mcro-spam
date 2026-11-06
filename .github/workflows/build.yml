@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     name: Build iOS App
-    runs-on: macos-14
+    runs-on: macos-latest
     steps:
       - name: 📥 Lấy mã nguồn
         uses: actions/checkout@v4
