@@ -1,0 +1,12 @@
+workflows:
+  ios-build:
+    name: Build iOS IPA
+    instance_type: mac_mini_m2
+    environment:
+      xcode: 15.4
+    scripts:
+      - xcodegen generate
+      - xcodebuild archive -scheme ClickTap -configuration Release -archivePath ClickTap.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+      - xcodebuild -exportArchive -archivePath ClickTap.xcarchive -exportOptionsPlist ExportOptions.plist -exportPath build/ipa CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+    artifacts:
+      - build/ipa/*.ipa
